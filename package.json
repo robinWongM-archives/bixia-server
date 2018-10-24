@@ -1,0 +1,54 @@
+{
+  "name": "bixia-server",
+  "version": "1.0.0",
+  "description": "Bixia API Server",
+  "private": true,
+  "dependencies": {
+    "egg": "^2.2.1",
+    "egg-passport": "^2.0.1",
+    "egg-passport-github": "^1.0.0",
+    "egg-scripts": "^2.5.0",
+    "egg-sequelize": "^4.0.2",
+    "egg-socket.io": "^4.0.8",
+    "egg-validate": "^1.1.1",
+    "got": "^9.0.0",
+    "mysql2": "^1.6.1",
+    "nanoid": "^1.2.1",
+    "sequelize-cli": "^4.0.0"
+  },
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.5",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.14.0",
+    "eslint": "^4.11.0",
+    "eslint-config-egg": "^6.0.0",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=8.9.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-bixia-server --sticky",
+    "stop": "egg-scripts stop --title=egg-server-bixia-server",
+    "dev": "egg-bin dev --sticky",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "sequelize": "sequelize --"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Robin Wong",
+  "license": "MIT"
+}
